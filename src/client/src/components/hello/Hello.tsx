@@ -1,4 +1,3 @@
-import FirstName from "./FirstName";
 import TextAppear from "./TextAppear";
 
 import "./Hello.css";
