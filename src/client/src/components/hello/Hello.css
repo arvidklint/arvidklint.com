@@ -1,0 +1,12 @@
+.Hello {
+    font-family: 'Lato', sans-serif;
+}
+
+.Hello-title {
+    margin: 8px 0;
+}
+
+.Hello-subtitle {
+    margin: 8px 0;
+    color: var(--secondary-text-color);
+}

@@ -1,0 +1,7 @@
+.Letter {
+    display: inline-block;
+}
+
+.Letter-space {
+    width: 0.4rem;
+}

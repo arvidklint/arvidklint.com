@@ -1,0 +1,28 @@
+.App {
+  min-height: 100vh;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.App-header {
+  position: absolute;
+}
+
+.App-main {
+  width: 1500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
