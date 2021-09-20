@@ -12,7 +12,6 @@ interface Props {
 
 function TextAppear({ value, duration = 1, delay = 0.5 }: Props) {
   const chars = Array.from(value);
-  console.log(chars)
 
   const variants = {
     hidden: {
