@@ -1,0 +1,14 @@
+.Header {
+    max-width: 1080px;
+    width: calc(100vw - 32px);
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Header-darkModeToggle {
+    justify-self: end;
+}

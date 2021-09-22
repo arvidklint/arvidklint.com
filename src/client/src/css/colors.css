@@ -1,6 +1,15 @@
-:root {
+body {
+  --background-color: #fefefe;
+  --main-text-color: #282c34;
+  --accent-color: #ffc30b;
+  --secondary-text-color: #898d96;
+
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+body.dark {
   --background-color: #282c34;
   --main-text-color: #eeeeee;
   --accent-color: #ffc30b;
-  --secondary-text-color: #5b667c;
+  --secondary-text-color: #4a556b;
 }

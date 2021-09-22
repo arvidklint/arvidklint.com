@@ -12,6 +12,7 @@
 
 .App-main {
   width: 100%;
+  max-width: 1500px;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -27,4 +28,3 @@ a {
 a:hover {
   color: var(--accent-color);
 }
-
