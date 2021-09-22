@@ -8,9 +8,17 @@ interface Props {
   value: string;
   duration?: number;
   delay?: number;
+  startX?: number;
+  startY?: number;
 }
 
-function TextAppear({ value, duration = 1, delay = 0.5 }: Props) {
+function TextAppear({
+  value,
+  duration = 1,
+  delay = 0.5,
+  startX = 0,
+  startY = -10,
+}: Props) {
   const chars = Array.from(value);
 
   const variants = {
@@ -19,7 +27,10 @@ function TextAppear({ value, duration = 1, delay = 0.5 }: Props) {
     },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: duration / chars.length, delayChildren: delay },
+      transition: {
+        staggerChildren: duration / chars.length,
+        delayChildren: delay,
+      },
     },
   };
 
@@ -31,7 +42,7 @@ function TextAppear({ value, duration = 1, delay = 0.5 }: Props) {
       animate="visible"
     >
       {chars.map((c, index) => (
-        <Letter char={c} key={index} />
+        <Letter char={c} key={index} startX={startX} startY={startY} />
       ))}
     </motion.span>
   );
