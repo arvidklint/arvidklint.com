@@ -1,8 +1,8 @@
 export enum TimePeriod {
-    MORNING,
-    DAY,
-    EVENING,
-    NIGHT
+    MORNING = "MORNING",
+    DAY = "DAY",
+    EVENING = "EVENING",
+    NIGHT = "NIGHT"
 };
 
 export function getTimePeriod(): TimePeriod {
