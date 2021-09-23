@@ -1,8 +1,8 @@
 body {
   --background-color: #fefefe;
-  --main-text-color: #282c34;
-  --accent-color: #ffc30b;
-  --secondary-text-color: #898d96;
+  --main-text-color: #383838;
+  --secondary-text-color: #c3c8d1;
+  --accent-color: #db4136;
 
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
@@ -10,6 +10,6 @@ body {
 body.dark {
   --background-color: #282c34;
   --main-text-color: #eeeeee;
-  --accent-color: #ffc30b;
-  --secondary-text-color: #4a556b;
+  --secondary-text-color: #444b5a;
+  --accent-color: #eeba4a;
 }

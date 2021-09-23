@@ -1,7 +1,4 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
-
-import TextAppear from "../hello/TextAppear";
 
 import "./Link.css";
 
@@ -20,18 +17,40 @@ const backgroundVariants = {
   },
 };
 
-const contentVariants = {
+const background2Variants = {
   hover: {
-    scale: 1,
+    rotate: 25,
   },
   idle: {
-    scale: 0.8,
+    rotate: 0,
+  },
+};
+
+const nameVariants = {
+  hover: {
+    opacity: 1,
+    scale: 1,
+    y: -30,
+  },
+  idle: {
+    opacity: 0,
+    scale: 0,
+    y: 0,
+  },
+};
+
+const contentVariant = {
+  hover: {
+    scale: 0.7,
+    y: -20,
+  },
+  idle: {
+    scale: 1,
+    y: 0,
   },
 };
 
 function Link({ name, href, content }: Props) {
-  const [hover, setHover] = useState<boolean>(false);
-
   return (
     <motion.a
       className="Link"
@@ -39,29 +58,21 @@ function Link({ name, href, content }: Props) {
       target="_blank"
       animate="idle"
       whileHover="hover"
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
     >
-      <motion.div variants={backgroundVariants} className="Link-background">
-        <div className="Link-name-container">
-          <div className="Link-name-pusher"></div>
-          <div className="Link-name">
-            <TextAppear
-              value={`${name}`}
-              duration={0.3}
-              delay={0.2}
-              startX={20}
-              startY={0}
-              animate={hover ? "visible" : "hidden"}
-              type="tween"
-            />
-          </div>
-          {/* <span className="Link-name">{name}</span> */}
-        </div>
-      </motion.div>
-      <div className="Link-content">
+      <motion.div
+        variants={background2Variants}
+        className="Link-background Link-background-accent"
+      ></motion.div>
+      <motion.div
+        variants={backgroundVariants}
+        className="Link-background"
+      ></motion.div>
+      <motion.div variants={contentVariant} className="Link-content">
         {content}
-      </div>
+      </motion.div>
+      <motion.div variants={nameVariants} className="Link-name">
+        {name}
+      </motion.div>
     </motion.a>
   );
 }

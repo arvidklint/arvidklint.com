@@ -1,7 +1,8 @@
 .Link {
-    padding: 8px;
+    padding: 32px;
     margin: 0 64px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 96px;
@@ -23,13 +24,16 @@
   z-index: -1;
 }
 
+.Link-background-accent {
+    background-color: var(--accent-color);
+}
+
 .Link-content {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 24px;
     color: var(--background-color);
 }
 
@@ -46,8 +50,7 @@
 }
 
 .Link-name {
-    color: var(--main-text-color);
-    width: 100%;
-    margin-left: 16px;
-    font-size: 1.2rem;
+    color: var(--background-color);
+    position: absolute;
+    bottom: 0;
 }
