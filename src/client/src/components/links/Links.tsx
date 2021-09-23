@@ -32,7 +32,7 @@ const ulVariants = {
     transition: {
       duration: 1,
       staggerChildren: 0.3,
-      delayChildren: 0,
+      delayChildren: 3.5,
     },
   },
 };
