@@ -6,8 +6,10 @@ import "./Main.css";
 function Main() {
   return (
     <main className="Main">
-      <Hello />
-      <Links />
+      <div className="Main-container">
+        <Hello />
+        <Links />
+      </div>
     </main>
   );
 }

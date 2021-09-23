@@ -54,3 +54,17 @@
     position: absolute;
     bottom: 0;
 }
+
+@media screen and (max-width: 1280px) {
+    .Link {
+        width: 32px;
+        height: 32px;
+        margin: 0 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Link {
+        margin: 32px 0;
+    }
+}
