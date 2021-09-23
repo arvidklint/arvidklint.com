@@ -10,6 +10,8 @@ interface Props {
   delay?: number;
   startX?: number;
   startY?: number;
+  animate?: string;
+  type?: "spring" | "tween";
 }
 
 function TextAppear({
@@ -18,6 +20,8 @@ function TextAppear({
   delay = 0.5,
   startX = 0,
   startY = -10,
+  animate = "visible",
+  type = "spring"
 }: Props) {
   const chars = Array.from(value);
 
@@ -39,10 +43,10 @@ function TextAppear({
       className="TextAppear"
       variants={variants}
       initial="hidden"
-      animate="visible"
+      animate={animate}
     >
       {chars.map((c, index) => (
-        <Letter char={c} key={index} startX={startX} startY={startY} />
+        <Letter char={c} key={index} startX={startX} startY={startY} type={type} />
       ))}
     </motion.span>
   );

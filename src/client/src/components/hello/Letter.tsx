@@ -7,9 +7,10 @@ interface Props {
   char: string;
   startX: number;
   startY: number;
+  type: "spring" | "tween";
 }
 
-function Letter({ char, startX, startY }: Props) {
+function Letter({ char, startX, startY, type }: Props) {
   const variants = {
     hidden: {
       opacity: 0,
@@ -21,7 +22,8 @@ function Letter({ char, startX, startY }: Props) {
       y: 0,
       x: 0,
       transition: {
-        type: "spring",
+        duration: type === "tween" ? 0.15 : null,
+        type,
         stiffness: 1000,
         damping: 20,
       },

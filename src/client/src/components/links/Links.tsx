@@ -1,0 +1,72 @@
+import { motion } from "framer-motion";
+
+import Link, { Props as LinkProps } from "./Link";
+
+import { ReactComponent as Github } from "./svg/github.svg";
+import { ReactComponent as Linkedin } from "./svg/linkedin.svg";
+import { ReactComponent as EMail } from "./svg/email.svg";
+
+import "./Links.css";
+
+const links: Array<LinkProps> = [
+  {
+    name: "Github",
+    href: "https://github.com/arvidsat",
+    content: <Github />,
+  },
+  {
+    name: "Linkedin",
+    href: "https://www.linkedin.com/in/arvidklint",
+    content: <Linkedin />,
+  },
+  {
+    name: "E-mail",
+    href: "mailto:arvid@arvidklint.com",
+    content: <EMail />,
+  },
+];
+
+const ulVariants = {
+  hidden: { },
+  visible: {
+    transition: {
+      duration: 1,
+      staggerChildren: 0.3,
+      delayChildren: 0,
+    },
+  },
+};
+
+const liVariants = {
+  hidden: {
+    opacity: 0,
+    x: 40,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+        duration: 1,
+        type: "easeOut"
+    }
+  },
+};
+
+function Links() {
+  return (
+    <motion.ul
+      variants={ulVariants}
+      initial="hidden"
+      animate="visible"
+      className="Links"
+    >
+      {links.map((link) => (
+        <motion.li variants={liVariants} key={link.name}>
+          <Link {...link} />
+        </motion.li>
+      ))}
+    </motion.ul>
+  );
+}
+
+export default Links;

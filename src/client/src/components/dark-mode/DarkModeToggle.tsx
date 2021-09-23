@@ -22,15 +22,9 @@ function setDarkModeClass(dark: boolean) {
 const backgroundVariants = {
   hover: {
     rotate: 45,
-    transition: {
-      type: "spring",
-    },
   },
   idle: {
     rotate: 0,
-    transition: {
-      type: "spring",
-    },
   },
   click: {
     scale: 1.2,

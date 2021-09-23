@@ -1,0 +1,6 @@
+.Links {
+    list-style: none;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
