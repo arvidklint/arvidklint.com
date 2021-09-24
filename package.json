@@ -24,12 +24,6 @@
     "build": "next build",
     "start": "next start"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -42,5 +36,10 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8080"
+  "proxy": "http://localhost:8080",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-next": "11.1.2",
+    "typescript-plugin-css-modules": "^3.4.0"
+  }
 }
