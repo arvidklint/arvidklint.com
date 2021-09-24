@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import DarkModeIcon from "./DarkModeIcon";
 
-import "./DarkModeToggle.css";
+import styles from "./DarkModeToggle.module.css";
 
 const DARK_MODE_KEY = "dark-mode";
 
@@ -46,7 +46,7 @@ function DarkModeToggle() {
 
   return (
     <motion.button
-      className="DarkModeToggle"
+      className={styles.DarkModeToggle}
       onClick={() => {
         setDarkMode(!darkMode);
       }}
@@ -56,10 +56,10 @@ function DarkModeToggle() {
       whileTap="click"
     >
       <motion.div
-        className="DarkModeToggle-background"
+        className={styles["DarkModeToggle-background"]}
         variants={backgroundVariants}
       ></motion.div>
-      <div className="DarkModeToggle-content">
+      <div className={styles["DarkModeToggle-content"]}>
         <DarkModeIcon dark={darkMode} />
       </div>
     </motion.button>

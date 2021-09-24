@@ -1,5 +1,6 @@
-import "./DarkModeIcon.css";
 import cn from "classnames";
+
+import styles from "./DarkModeIcon.module.css";
 
 interface Props {
   dark: boolean;
@@ -13,8 +14,8 @@ function DarkModeIcon({ dark }: Props) {
   const rayDistance = 8;
   return (
     <svg
-      className={cn("DarkModeIcon", {
-        "DarkModeIcon-dark-mode": dark,
+      className={cn(styles.DarkModeIcon, {
+        [styles["DarkModeIcon-dark-mode"]]: dark,
       })}
       viewBox="0 0 100 100"
       strokeWidth="1mm"
@@ -23,8 +24,8 @@ function DarkModeIcon({ dark }: Props) {
       <mask id="DarkModeIcon-moon-mask">
         <rect x="0" y="0" width="100" height="100" fill="white" />
         <circle
-          className={cn("DarkModeIcon-moon", {
-            "DarkModeIcon-moon-hide": !dark,
+          className={cn(styles["DarkModeIcon-moon"], {
+            [styles["DarkModeIcon-moon-hide"]]: !dark,
           })}
           cx="58"
           cy="48"
@@ -42,8 +43,8 @@ function DarkModeIcon({ dark }: Props) {
         const y2 = Math.sin(angle) * (radius + rayDistance + rayLength) + 50;
         return (
           <line
-            className={cn("DarkModeIcon-ray", {
-              "DarkModeIcon-ray-hide": dark,
+            className={cn(styles["DarkModeIcon-ray"], {
+              [styles["DarkModeIcon-ray-hide"]]: dark,
             })}
             key={ray}
             x1={x1}

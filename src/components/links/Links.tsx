@@ -2,11 +2,14 @@ import { motion } from "framer-motion";
 
 import Link, { Props as LinkProps } from "./Link";
 
-import { ReactComponent as Github } from "./svg/github.svg";
-import { ReactComponent as Linkedin } from "./svg/linkedin.svg";
-import { ReactComponent as EMail } from "./svg/email.svg";
+import Github from "./svg/Github"
+import Linkedin from "./svg/Linkedin"
+import Email from "./svg/Email"
+// import { ReactComponent as Github } from "./svg/github.svg";
+// import { ReactComponent as Linkedin } from "./svg/linkedin.svg";
+// import { ReactComponent as EMail } from "./svg/email.svg";
 
-import "./Links.css";
+import styles from "./Links.module.css";
 
 const links: Array<LinkProps> = [
   {
@@ -22,7 +25,7 @@ const links: Array<LinkProps> = [
   {
     name: "E-mail",
     href: "mailto:arvid@arvidklint.com",
-    content: <EMail />,
+    content: <Email />,
   },
 ];
 
@@ -58,7 +61,7 @@ function Links() {
       variants={ulVariants}
       initial="hidden"
       animate="visible"
-      className="Links"
+      className={styles["Links"]}
     >
       {links.map((link) => (
         <motion.li variants={liVariants} key={link.name}>

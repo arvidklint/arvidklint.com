@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import cn from "classnames";
 
-import "./Letter.css";
+import styles from "./Letter.module.css";
 
 interface Props {
   char: string;
@@ -33,7 +33,7 @@ function Letter({ char, startX, startY, type }: Props) {
   return (
     <motion.span
       variants={variants}
-      className={cn("Letter", { "Letter-space": char === " " })}
+      className={cn(styles["Letter"], { [styles["Letter-space"]]: char === " " })}
     >
       {char}
     </motion.span>

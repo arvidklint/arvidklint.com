@@ -8,9 +8,3 @@
 .App-header {
   position: absolute;
 }
-
-a {
-  color: var(--main-text-color);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}

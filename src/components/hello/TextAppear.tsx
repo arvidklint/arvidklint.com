@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 import Letter from "./Letter";
 
-import "./TextAppear.css";
+import styles from "./TextAppear.module.css";
 
 interface Props {
   value: string;
@@ -43,7 +43,7 @@ function TextAppear({
 
   return (
     <motion.span
-      className="TextAppear"
+      className={styles["TextAppear"]}
       variants={variants}
       initial="hidden"
       animate={animate}

@@ -1,12 +1,12 @@
 import Hello from "./hello/Hello";
 import Links from "./links/Links";
 
-import "./Main.css";
+import styles from "./Main.module.css";
 
 function Main() {
   return (
-    <main className="Main">
-      <div className="Main-container">
+    <main className={styles.Main}>
+      <div className={styles["Main-container"]}>
         <Hello />
         <Links />
       </div>
