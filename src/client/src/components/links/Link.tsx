@@ -19,38 +19,40 @@ const backgroundVariants = {
 
 const background2Variants = {
   hover: {
+    scale: 1,
     rotate: 25,
   },
   idle: {
+    scale: 0.8,
     rotate: 0,
   },
 };
 
-const nameVariants = {
-  hover: {
-    opacity: 1,
-    scale: 1,
-    y: -30,
-  },
-  idle: {
-    opacity: 0,
-    scale: 0,
-    y: 0,
-  },
-};
-
-const contentVariant = {
-  hover: {
-    scale: 0.7,
-    y: -20,
-  },
-  idle: {
-    scale: 1,
-    y: 0,
-  },
-};
-
 function Link({ name, href, content }: Props) {
+  const nameVariants = {
+    hover: {
+      opacity: 1,
+      scale: 1,
+      y: window.innerWidth < 1500 ? -15 : -35,
+    },
+    idle: {
+      opacity: 0,
+      scale: 0,
+      y: 0,
+    },
+  };
+
+  const contentVariant = {
+    hover: {
+      scale: 0.7,
+      y: window.innerWidth < 1500 ? -15 : -20,
+    },
+    idle: {
+      scale: 1,
+      y: 0,
+    },
+  };
+
   return (
     <motion.a
       className="Link"

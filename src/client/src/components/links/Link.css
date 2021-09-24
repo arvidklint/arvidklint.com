@@ -1,18 +1,18 @@
 .Link {
-    padding: 32px;
-    margin: 0 64px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 96px;
-    height: 96px;
-    position: relative;
-    transition: transform 0.3s ease-out;
+  padding: 32px;
+  margin: 0 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 96px;
+  height: 96px;
+  position: relative;
+  transition: transform 0.3s ease-out;
 }
 
 .Link:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .Link-background {
@@ -22,49 +22,59 @@
   width: 100%;
   height: 100%;
   z-index: -1;
+  box-shadow: var(--shadow);
+}
+
+.Link-background:hover {
+  box-shadow: var(--hover-shadow);
 }
 
 .Link-background-accent {
-    background-color: var(--accent-color);
+  background-color: var(--accent-color);
+  box-shadow: var(--shadow);
 }
 
 .Link-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    color: var(--background-color);
-}
-
-.Link-name-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform: rotate(-90deg);
-}
-
-.Link-name-pusher {
-    height: 100%;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--background-color);
+  pointer-events: none;
 }
 
 .Link-name {
-    color: var(--background-color);
-    position: absolute;
-    bottom: 0;
+  color: var(--background-color);
+  position: absolute;
+  bottom: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1500px) {
+  .Link {
+    width: 64px;
+    height: 64px;
+    padding: 16px;
+    margin: 0 48px;
+  }
+
+  .Link-name {
+    font-size: 0.7rem;
+  }
 }
 
 @media screen and (max-width: 1280px) {
-    .Link {
-        width: 32px;
-        height: 32px;
-        margin: 0 32px;
-    }
+  .Link {
+    margin: 0 32px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .Link {
-        margin: 32px 0;
-    }
+  .Link {
+    margin: 16px 0;
+    padding: 16px;
+    width: 32px;
+    height: 32px;
+  }
 }
