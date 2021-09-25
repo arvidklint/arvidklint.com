@@ -3,33 +3,31 @@ import TextAppear from "./TextAppear";
 import { getTimePeriod, TimePeriod } from "../../time";
 
 import styles from "./Hello.module.css";
+import { useEffect, useState } from "react";
 
 interface Hellos extends Record<TimePeriod, Array<string>> {}
 
 const hellos: Hellos = {
-  "DAY": [
-    "Hello",
-    "Hi!"
-  ],
-  "MORNING": [
-    "Good morning",
-  ],
-  "EVENING": [
-    "Good evening",
-  ],
-  "NIGHT": [
-    "Good evening"
-  ]
-}
+  DAY: ["Hello", "Hi!"],
+  MORNING: ["Good morning"],
+  EVENING: ["Good evening"],
+  NIGHT: ["Good evening"],
+};
 
 function getRandomFromArray<T>(array: Array<T>): T {
-  return array[Math.floor(Math.random() * array.length)]
+  return array[Math.floor(Math.random() * array.length)];
 }
 
 function Hello() {
-  const period = getTimePeriod()
-  const helloArray = hellos[period];
-  const hello = getRandomFromArray(helloArray);
+  const [hello, setHello] = useState<string>("");
+  useEffect(() => {
+    const period = getTimePeriod();
+    const helloArray = hellos[period];
+    const hello = getRandomFromArray(helloArray);
+    setHello(hello);
+  }, []);
+
+  if (hello === "") return null;
 
   return (
     <div className={styles["Hello"]}>
@@ -40,7 +38,12 @@ function Hello() {
         <TextAppear value="I'm Arvid" duration={0.7} delay={1.5} />
       </h1>
       <h2 className={styles["Hello-subtitle"]}>
-        <TextAppear value="/ Fullstack Engineer" delay={2.5} startX={0} startY={10} />
+        <TextAppear
+          value="/ Fullstack Engineer"
+          delay={2.5}
+          startX={0}
+          startY={10}
+        />
       </h2>
     </div>
   );
