@@ -14,7 +14,7 @@ import styles from "./Links.module.css";
 const links: Array<LinkProps> = [
   {
     name: "Github",
-    href: "https://github.com/arvidsat",
+    href: "https://github.com/arvidklint",
     content: <Github />,
   },
   {
