@@ -38,6 +38,9 @@ function DarkModeToggle() {
     const darkModeItem = localStorage.getItem(DARK_MODE_KEY);
     if (darkModeItem !== null) {
       setDarkMode(darkModeItem === "true");
+    } else {
+      const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setDarkMode(prefersDarkMode)
     }
   }, []);
   useEffect(() => {
