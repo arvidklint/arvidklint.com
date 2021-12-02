@@ -5,9 +5,6 @@ import Link, { Props as LinkProps } from "./Link";
 import Github from "./svg/Github"
 import Linkedin from "./svg/Linkedin"
 import Email from "./svg/Email"
-// import { ReactComponent as Github } from "./svg/github.svg";
-// import { ReactComponent as Linkedin } from "./svg/linkedin.svg";
-// import { ReactComponent as EMail } from "./svg/email.svg";
 
 import styles from "./Links.module.css";
 
