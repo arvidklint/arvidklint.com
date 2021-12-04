@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useEffect } from "react";
 import Header from "../components/Header";
 import Main from "../components/Main";
-import Background from "../components/background/Background.tsx";
+import Background from "../components/background/Background";
 
 import { TimePeriod, getTimePeriod } from "../time";
 
