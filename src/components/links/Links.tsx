@@ -21,7 +21,7 @@ const links: Array<LinkProps> = [
   },
   {
     name: "E-mail",
-    href: "mailto:arvidklint@protonmail.com",
+    href: "mailto:arvid@arvidklint.com",
     content: <Email />,
   },
 ];
