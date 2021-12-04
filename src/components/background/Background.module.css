@@ -1,23 +1,32 @@
 .container {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
-  filter: blur(200px);
   overflow: hidden;
   pointer-events: none;
   z-index: 0;
 }
 
 .ballContainer {
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100%;
-  transform-origin: center;
+  max-width: 100vh;
   animation: rotate linear 40s infinite;
+}
+.ballContainer:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 
 .ballWrapper {
   position: absolute;
+  transform-origin: center;
 }
 .ballWrapper:after {
   content: "";
@@ -30,23 +39,15 @@
   width: 100%;
   height: 100%;
   animation: move 10s ease-in-out infinite alternate;
-  border-radius: 50%;
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: var(--background-color);
-  opacity: var(--background-overlay-opacity);
+  opacity: var(--background-opacity);
 }
 
 @keyframes move {
   from {
-    transform: translateY(0);
+    transform: translateY(-25%);
   }
   to {
-    transform: translateY(100%);
+    transform: translateY(25%);
   }
 }
 

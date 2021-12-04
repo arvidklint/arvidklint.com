@@ -1,6 +1,6 @@
 body {
   --background-color: #f5f5f5;
-  --background-overlay-opacity: 0.4;
+  --background-opacity: 0.5;
   --main-text-color: #2a312d;
   --secondary-text-color: #c3c8d1;
   --accent-color: #8db48e;
@@ -16,7 +16,7 @@ body {
 
 body.dark {
   --background-color: #282c34;
-  --background-overlay-opacity: 0.5;
+  --background-opacity: 0.25;
   --main-text-color: #eeeeee;
   --secondary-text-color: #c3c8d1;
   --accent-color: #facc68;
