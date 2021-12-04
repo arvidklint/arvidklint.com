@@ -1,10 +1,15 @@
+.Hello {
+  z-index: 1;
+}
+
 .Hello-title {
   margin: 8px 0;
 }
 
 .Hello-subtitle {
   margin: 8px 0;
-  color: var(--secondary-text-color);
+  color: var(--main-text-color);
+  opacity: 0.4;
 }
 
 @media screen and (min-width: 768px) {

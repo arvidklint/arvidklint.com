@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useEffect } from "react";
 import Header from "../components/Header";
 import Main from "../components/Main";
+import Background from "../components/background/Background.tsx";
 
 import { TimePeriod, getTimePeriod } from "../time";
 
@@ -41,6 +42,7 @@ function Index() {
       <title>Arvid Klint</title>
     </Head>
     <div className={styles["App"]}>
+      <Background />
       <Header />
       <Main />
     </div>
