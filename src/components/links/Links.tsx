@@ -16,7 +16,7 @@ const links: Array<LinkProps> = [
   },
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/in/arvidklint",
+    href: "https://linkedin.com/in/arvidklint",
     content: <Linkedin />,
   },
   {
