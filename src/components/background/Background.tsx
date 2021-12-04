@@ -4,7 +4,8 @@ interface Ball {
   id: number;
   x: number;
   y: number;
-  r: number;
+  radius: number;
+  rotation: number;
   color: string;
 };
 
@@ -85,7 +86,7 @@ function Background() {
           )
         })}
       </div>
-      <div class={styles.overlay}></div>
+      <div className={styles.overlay}></div>
     </div>
   );
 }
